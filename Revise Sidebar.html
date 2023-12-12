@@ -1,0 +1,3015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Revise Nav-Bar</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+
+
+  <!-- For Custom Design Table -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+  <!-- For Custom Design Table -->
+
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+  <!-- Add Font Awesome 6 CSS -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css" />
+  <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+
+  <!-- Add DataTables CSS -->
+
+  <!-- <link href="https://cdn.datatables.net/responsive/2.2.10/css/responsive.dataTables.min.css" rel="stylesheet"> -->
+
+  <!-- Add DataTables Responsive CSS -->
+
+
+  <link rel="stylesheet" href="csstrial.css">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+    /* .demo {
+      font-family: 'Noto Sans', sans-serif;
+    } */
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      overflow-x: hidden;
+      /* Hide the horizontal scrollbar */
+      /* background-color: #0000006b; */
+      transition: background-color 1s;
+    }
+
+    html {
+      margin: auto;
+    }
+
+    ::-webkit-scrollbar {
+      width: 1px;
+
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #000000;
+      border-radius: 5px;
+      display: none;
+    }
+
+
+    /* Sidebar Styles */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      /* Initially hide the sidebar */
+      height: 100%;
+      width: 250px;
+      background-image: linear-gradient(to right, #073f7f, #073f7f);
+      padding-top: 15px;
+      transition: 0.3s;
+      z-index: 2;
+      /* Adjust z-index */
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      overflow-y: auto;
+    }
+
+    .brand {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: linear-gradient(to right bottom, #073f7f 30%, #073f7f 80%);
+    }
+
+
+    #MERsut-txt {
+      font-size: 25px;
+    }
+
+    .animate-MER {
+      background-image: linear-gradient(225deg,
+          #ffffff 0%,
+          #ffffff 29%,
+          #99a7c8 67%,
+          #004cff 100%);
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+      /* font-size: 30px; */
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    /* .line {
+      position: relative;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(134, 134, 134);
+   
+    } */
+
+
+    .sidebar a {
+      padding: 25px 15px;
+      /* Added padding top and bottom */
+      text-decoration: none;
+      font-size: 20px;
+      color: #d6d5d5;
+      display: flex;
+      align-items: center;
+      /* Center the icon and text */
+      transition: 0.3s;
+    }
+
+    .sidebar li :active {
+      color: #ffffff;
+      /* Change the color for the active state */
+      background-color: #b60b0b;
+      /* Add a background color for the active state */
+      /* Add any other styling for the active state */
+    }
+
+
+
+
+    .sidebar a i {
+      margin-right: 10px;
+      /* padding: 10px 0px 10px 0px; */
+      padding: 15px;
+    }
+
+
+    .sidebar li {
+      position: relative;
+      line-height: 20px;
+      /* display: inline-block; */
+      width: 100%;
+      list-style: none;
+    }
+
+
+    .sidebar li:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -3px;
+      z-index: -1;
+      height: 100%;
+      width: 3px;
+      background-color: #00000072;
+      /* color: #a94949; */
+      -webkit-transition: width .2s ease-in;
+      -moz-transition: width .2s ease-in;
+      -ms-transition: width .2s ease-in;
+      transition: width .2s ease-in;
+
+      border-bottom: rgb(2, 193, 223) 3px solid;
+
+    }
+
+    #Sgn-Out-btn:before {
+      background-color: #ff00009a;
+      border-bottom: rgb(2, 193, 223) 3px solid;
+    }
+
+
+    /* .sidebar li:nth-child(5n+3):before {
+      background-color: #440e04;
+    }
+    .sidebar li:nth-child(5n+4):before {
+      background-color: #ca8b02;
+    }
+    .sidebar li:nth-child(5n+5):before {
+      background-color: #79aefe;
+    } */
+
+    .sidebar li:hover:before,
+    .sidebar li.open:hover:before {
+      width: 101%;
+      -webkit-transition: width .2s ease-in;
+      -moz-transition: width .2s ease-in;
+      -ms-transition: width .2s ease-in;
+      transition: width .2s ease-in;
+
+    }
+
+
+    .sidebar li a:hover {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(81, 77, 74, 0.8);
+      z-index: 2;
+    }
+
+    /* Animation */
+    .sidebar:before {
+      content: "\f054";
+      /* Font Awesome bars icon (hamburger) */
+      font-family: FontAwesome;
+      font-size: 30px;
+      color: #fff;
+      position: absolute;
+      left: -30px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .sidebar.open {
+      left: 0;
+      z-index: 3;
+      /* Adjust z-index */
+    }
+
+    .sidebar.open:before {
+      left: 250px;
+    }
+
+    /* Content Area Styles */
+    .content {
+      margin-left: 0;
+      /* Adjusted to 0 when sidebar is open */
+      transition: 0.3s;
+      padding: 20px;
+      /* Added padding */
+      z-index: 0;
+      /* Adjust z-index */
+    }
+
+    /* Toggle Button Styles */
+    .toggle-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      z-index: 3;
+      /* Adjust z-index */
+    }
+
+    @media (min-width: 768px) {
+      .toggle-btn {
+        display: none;
+      }
+
+      .content {
+        margin-left: 250px;
+      }
+
+      .sidebar {
+        left: 0;
+      }
+    }
+
+
+    @media (max-height: 760px) {
+      .sidebar {
+        overflow-y: auto;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .panel {
+      background: linear-gradient(to right, #073f7f, #2c3e50);
+      padding: 0;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05), 0 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .panel .panel-heading {
+      padding: 20px 15px;
+      border-radius: 10px 10px 0 0;
+      margin: 0;
+    }
+
+    .panel .panel-heading .title {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 40px;
+      margin: 0;
+    }
+
+    .panel .panel-heading .btn {
+      color: rgba(255, 255, 255, 0.5);
+      background: transparent;
+      font-size: 16px;
+      text-transform: capitalize;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      transition: all 0.3s ease 0s;
+    }
+
+    .panel .panel-heading .btn:hover {
+      color: #fff;
+      text-shadow: 3px 3px rgba(255, 255, 255, 0.2);
+    }
+
+    .panel .panel-heading .form-control {
+      color: #fff;
+      background-color: transparent;
+      width: 35%;
+      height: 40px;
+      border: 2px solid #fff;
+      border-radius: 20px;
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+    }
+
+    .panel .panel-heading .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: none;
+      outline: none;
+    }
+
+    .panel .panel-heading .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .panel .panel-body {
+      padding: 0;
+    }
+
+    .panel .panel-body .table thead tr th {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 12px;
+      border: none;
+    }
+
+    .panel .panel-body .table tbody tr td {
+      color: #fff;
+      background: linear-gradient(to right, #073f7f, #20588f);
+      font-size: 14px;
+      padding: 10px 12px;
+      vertical-align: middle;
+      border-color: #4c75a4;
+
+      transition: all 0.5 ease 0s;
+      overflow: hidden;
+    }
+
+    /* Add hover effect for table rows */
+    .panel .panel-body .table tbody tr:hover td {
+      background: linear-gradient(to right, #20588f, #073f7f);
+      /* Change the gradient colors on hover */
+      color: #fff;
+      /* Change text color on hover */
+      transform: scale(1.0);
+      /* Add a subtle scale effect on hover */
+      overflow: auto;
+    }
+
+    .panel .panel-body .table tbody tr:nth-child(even) {
+      background-color: rgb(120, 13, 13);
+    }
+
+    .panel .panel-body .table tbody .action-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .panel .panel-body .table tbody .action-list li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .panel .panel-body .table tbody .action-list li a {
+      color: #fff;
+      font-size: 15px;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease 0s;
+    }
+
+    .panel .panel-body .table tbody .action-list li a:hover {
+      text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .panel .panel-body .table tbody .action-list li a:before,
+    .panel .panel-body .table tbody .action-list li a:after {
+      content: attr(data-tip);
+      color: #fff;
+      background-color: #111;
+      font-size: 12px;
+      padding: 5px 7px;
+      border-radius: 4px;
+      text-transform: capitalize;
+      display: none;
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      top: -32px;
+      transition: all 0.3s ease 0s;
+    }
+
+    .panel .panel-body .table tbody .action-list li a:after {
+      content: '';
+      height: 15px;
+      width: 15px;
+      padding: 0;
+      border-radius: 0;
+      transform: translateX(-50%) rotate(45deg);
+      top: -18px;
+      z-index: -1;
+    }
+
+    .panel .panel-body .table tbody .action-list li a:hover:before,
+    .panel .panel-body .table tbody .action-list li a:hover:after {
+      display: block;
+    }
+
+    .panel .panel-footer {
+      color: #a31111;
+      background-color: transparent;
+      padding: 10px;
+      border: none;
+    }
+
+    .panel .panel-footer .col {
+      line-height: 35px;
+    }
+
+    /* Customize the header background color */
+    #blu-tbl thead th {
+      background-color: #1662b9;
+      color: rgb(255, 255, 255);
+      border: 1px solid #ffffff32;
+    }
+
+    /* Customize the search input */
+    #blu-tbl_filter input[type="search"] {
+      position: relative;
+      right: 10px;
+      max-width: 230px;
+      padding: 5px 10px 5px 20px;
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      color: white;
+
+      transition: background-color 0.5s ease;
+
+    }
+
+    #blu-tbl_filter input[type="search"]:hover {
+      background-color: #3e87d9;
+      /* color: black; */
+    }
+
+
+    /* Change the color of the search input field's placeholder text */
+    .dataTables_filter input::placeholder {
+      color: rgb(173, 170, 170);
+    }
+
+
+    /* Change the color of DataTable info text */
+    .dataTables_info {
+      position: relative;
+      color: #ffffff !important;
+      left: 10px;
+    }
+
+    /* Change the color of the "Show" text */
+    .dataTables_length label {
+      color: white;
+      margin-left: 10px;
+    }
+
+    /* Change the color of the "Entries" text */
+    .dataTables_length select {
+      color: rgb(255, 255, 255);
+      background-color: #073f7f !important;
+    }
+
+
+    /* Change the color of the active page button */
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+      border-radius: 20px;
+      color: #020202 !important;
+      padding: 5px 13px;
+      transition: all 0.3s ease 0s;
+      background-color: #004cff !important;
+    }
+
+    /* Style for previous and next buttons */
+    .dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+    .dataTables_wrapper .dataTables_paginate .paginate_button,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+      background-color: #073f7f;
+      border: 1px solid #007bff;
+      border-radius: 20px;
+      padding: 5px 13px;
+      color: rgb(255, 255, 255) !important;
+      text-decoration: none;
+      margin-right: 5px;
+      transition: all 0.3s ease 0s;
+      margin: 5px;
+    }
+
+
+    /* @media (min-width: 1000px) {
+      .panel {
+        position: relative;
+
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 999px) {
+      .panel {
+        position: relative;
+        left: 215px;
+
+      }
+    }
+
+    @media only screen and (max-width:767px) {
+      .panel .panel-heading .title {
+        text-align: center;
+        margin: 0 0 10px;
+      }
+
+      .panel .panel-heading .btn_group {
+        text-align: center;
+      }
+
+    } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Styles for the modal form */
+    /* .modal-content {
+      background: radial-gradient(circle, #ed1ce9, #205be4);
+      background-repeat: no-repeat;
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      position: relative;
+
+      border: 5px solid;
+      border-radius: 30px;
+      border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+      animation: borderRotate var(--d) linear infinite forwards;
+    } */
+
+
+
+    .modal-dialog {
+      /* display: inline-block; */
+      /* Keeps the content from taking up full width */
+      border-radius: 13px;
+      /* Set the border radius for the container */
+      overflow: hidden;
+      /* Clip the rounded corners */
+    }
+
+
+    .modal-content {
+      /* background: radial-gradient(circle, #ed1ce9, #205be4); */
+      background: linear-gradient(65deg, #194A84, #194A8478 75%, #9eb2d0 85%, #194A84);
+      background-repeat: no-repeat;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      position: relative;
+      border: 5px solid;
+      border-radius: 25px;
+      border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+      animation: borderRotate var(--d) linear infinite forwards;
+      /* border-image-slice: 30; */
+
+
+
+      /* Adjust this value to control the radius */
+      border-image-source: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn);
+    }
+
+    /* Styles for the image */
+    .modal-image {
+      max-width: 100%;
+
+      display: block;
+      /* object-fit: cover; */
+      border-radius: 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* Styles for the image */
+    .card-image {
+      position: relative;
+      color: #020202;
+      max-width: 100%;
+      height: 50%;
+      /* display: block; */
+      /* object-fit: contain; */
+      /* margin-top: 20px; */
+      border-radius: 20px;
+      z-index: 3;
+    }
+
+
+
+    /* Add the overlay */
+    .image-overlay {
+      position: relative;
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(2px);
+      background: linear-gradient(#6d9ed67d, #073f7f);
+      /* Semi-transparent black overlay */
+      border-radius: 20px;
+      z-index: 4;
+      /* Set z-index to a higher value to overlay the image */
+    }
+
+    /* GUMAGANA ETO KASO EXPERIMENTAL KAYA NEED NAKA SEPARATE YUNG CSS PROPERTY NETO */
+
+    /* @property --angle {
+      syntax: '<angle>';
+      initial-value: 90deg;
+      inherits: true;
+    }
+
+    @property --gradX {
+      syntax: '<percentage>';
+      initial-value: 50%;
+      inherits: true;
+    }
+
+    @property --gradY {
+      syntax: '<percentage>';
+      initial-value: 0%;
+      inherits: true;
+    } */
+
+    /* GUMAGANA ITO KASO EXPERIMENTAL KAYA NEED NAKA SEPARATE YUNG CSS PROPERTY NETO */
+
+    :root {
+      --d: 2500ms;
+      --angle: 90deg;
+      --gradX: 100%;
+      --gradY: 50%;
+      --c1: rgba(168, 239, 255, 1);
+      --c2: rgba(168, 239, 255, 0.1);
+    }
+
+    @keyframes borderRotate {
+      100% {
+        --angle: 420deg;
+      }
+    }
+
+
+
+
+
+
+    /* ----------------------------------------------------------- EDIT PROFILE CSS -------------------------------------------------- */
+
+    #profileImage {
+      height: 200px;
+      width: 200px;
+      /* You can adjust the maximum height as needed */
+      overflow: hidden;
+    }
+
+    #anotherIcon {
+      position: relative;
+      max-height: 200px;
+      max-width: 200px;
+      border-radius: 30px;
+      top: 17px;
+    }
+
+    #imageInput {
+      position: relative;
+      z-index: 1;
+
+    }
+
+    #admn-btn {
+      position: relative;
+      font-size: 20px;
+      color: #000000;
+      border-color: #d4d2d2;
+      border-width: 1px;
+      border-radius: 8px;
+      padding: 15px 10px 15px 60px;
+      transition: background-color 0.5s;
+    }
+
+    #admn-btn:active {
+      box-shadow: 0 3px #666;
+      transform: translateY(4px);
+    }
+
+    #left-frm {
+      height: 410px;
+      border-color: #073f7f;
+    }
+
+    .custom-file-label {
+      background-color: #073f7f;
+      color: #ffffff;
+      font-weight: 500;
+      transition: background-color 0.5s;
+    }
+
+    .custom-file-label::after {
+      content: none;
+    }
+
+    .custom-file-label:hover,
+    .gradient-hover-effect:focus {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    #descript-txt {
+      background-color: #d4dceb;
+      max-height: 100px;
+      font-weight: 500;
+      overflow-y: auto;
+    }
+
+    #usr-info {
+      color: #ffffff;
+      border-radius: 20px;
+      background: linear-gradient(65deg, #194A84, #194A8478 75%, #9eb2d0 85%, #194A84);
+    }
+
+    #updt-btn {
+      background-color: #073f7f;
+      font-weight: 500;
+      font-size: 20px;
+      width: 150px;
+      height: 45px;
+      transition: background-color 0.5s;
+    }
+
+    #updt-btn:hover,
+    .gradient-hover-effect:focus {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    #updt-btn:active {
+      box-shadow: 0 2px #666;
+      transform: translateY(3px);
+    }
+
+    /* ------------------------------- BIGGER SIZE SCREEN -------------------------------- */
+
+    @media (min-width: 768px) {
+      .toggle-btn {
+        display: none;
+      }
+
+      .editP-txt {
+        position: relative;
+        margin-left: 20px;
+        font-size: 60px;
+        font-weight: bold;
+        background-image: linear-gradient(to right, #073f7f, #073f7f);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+
+    }
+
+    /* ------------------------------- BIGGER SIZE SCREEN END -------------------------------- */
+
+
+    /* ------------------------------- SMALLER SIZE SCREEN -------------------------------- */
+    @media (max-width: 767px) {
+
+
+      .editP-txt {
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        background-image: linear-gradient(to right, #073f7f, #073f7f);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+
+      #admin-row {
+        flex-direction: row-reverse;
+      }
+
+    }
+
+
+    /* --------------------------------------------------------- EDIT PROFILE CSS END ------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ------------------ ADMIN BACK UP ------------------ */
+
+    #Bcku-btn .dropdown-menu {
+      background: linear-gradient(65deg, #194A84, #0c284ae4 65%, #9eb2d0 85%, #194A84);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* ------------------ ADMIN BACK UP END ------------------ */
+
+
+
+    /* ------------------ OPTO REPOSITORY ------------------ */
+
+    #Opto-Repo-btn .dropdown-menu {
+      background: linear-gradient(65deg, #194A84, #0c284ae4 65%, #9eb2d0 85%, #194A84);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    #Opto-Repo-btn .dropdown-menu:hover {
+      background: linear-gradient(65deg, #194A84, #0c284ae4 65%, #9eb2d0 85%, #194A84);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+
+
+
+    /* ------------------ OPTO REPOSITORY END ------------------ */
+
+
+
+    /* ------------------ OPTO ARCHIVE ------------------ */
+
+    #Opto-Arcv-btn .dropdown-menu {
+      background: linear-gradient(65deg, #194A84, #0c284ae4 65%, #9eb2d0 85%, #194A84);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* ------------------ OPTO ARCHIVED END ------------------ */
+
+
+    /* ------------------ OPTO GENERATE RECORD ------------------ */
+
+    #Opto-GenR-btn .dropdown-menu {
+      background: linear-gradient(65deg, #194A84, #0c284ae4 65%, #9eb2d0 85%, #194A84);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* ------------------ OPTO GENERATE RECORD END ------------------ */
+
+
+
+    /* ------------------ SECRETARY REPOSITORY ------------------ */
+
+    #Sec-Repo-btn .dropdown-menu {
+      background: linear-gradient(65deg, #194A84, #0c284ae4 65%, #9eb2d0 85%, #194A84);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* ------------------ SECRETARY REPOSITORY END ------------------ */
+
+
+
+    /* ------------------ SECRETARY GENERATE RECORD ------------------ */
+
+    #Sec-GenR-btn .dropdown-menu {
+      background: linear-gradient(65deg, #194A84, #0c284ae4 65%, #9eb2d0 85%, #194A84);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    /* ------------------ SECRETARY GENERATE RECORD END ------------------ */
+
+
+
+
+
+
+    /* ----------- PASSWORD SEEKER BUTTON ----------------- */
+
+    .no-hover-bg:hover {
+      background-color: transparent !important;
+    }
+
+    /* ----------- PASSWORD SEEKER BUTTON END ----------------- */
+
+
+
+
+
+    .color-picker {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .color-picker label {
+      margin-right: 10px;
+    }
+
+    .color-picker input {
+      margin-right: 10px;
+    }
+
+    .color-options {
+      display: flex;
+      gap: 110px;
+      margin: 30px;
+    }
+
+    .color-option {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+
+
+
+
+    /* --------------- First message box modified background color --------------- */
+    .custom-popup-class {
+      /* background-color: #073f7f !important; */
+      background: linear-gradient(125deg, #10417eeb 10%, #7c9dc5 45%, #6180af 75%, #194984ab 100%) !important;
+
+      /* Set your desired background color */
+    }
+
+    /* --------------- First message box modified background color End --------------- */
+
+
+    /* --------------- Second message box modified background color --------------- */
+    /* .swal2-popup.custom-result-popup-class {
+      background-color: #000000 !important;
+    } */
+    .swal2-popup.custom-result-popup-class .swal2-title,
+    .swal2-popup.custom-result-popup-class .swal2-content {
+
+      color: #073f7f !important;
+      /* Set your desired text color for the result message */
+    }
+
+    /* --------------- Second message box modified background color End --------------- */
+
+
+    /* ---------- Message dialog custom colors -------- */
+
+    .custom-title-class {
+      color: #ffffff !important;
+      /* Set your desired title text color */
+    }
+
+    .custom-content-class {
+      color: #ffffff !important;
+      /* Set your desired content/text color */
+    }
+
+    .custom-icon-class {
+      color: #ffc800 !important;
+      /* Set your desired icon color */
+    }
+
+    /* ---------- Message dialog custom colors End -------- */
+
+    /* Change the color of the confirm button to green */
+    .swal2-confirm {
+      background-color: #38b13c !important;
+      /* Green color */
+      color: #fff;
+      /* White text */
+      transition: linear 0.5s;
+      /* transition: color 0.5s linear; */
+      /* transition: background 0.3s ease-in-out; */
+      /* Smooth transition on background change */
+    }
+
+    /* Change the color of the cancel button to orange */
+    .swal2-cancel {
+      background-color: rgb(198, 52, 52) !important;
+      /* Orange color */
+      color: #fff;
+      /* White text */
+      /* transition: background-color 0.5s; */
+    }
+
+    /* Change the outline color of the buttons when clicked or focused */
+    .swal2-confirm:focus,
+    .swal2-confirm:active,
+    .swal2-cancel:focus,
+    .swal2-cancel:active {
+      box-shadow: 0 0 10px #000000 !important;
+      /* Black color */
+
+    }
+
+    /* Add hover color of the buttons when pointered */
+    .swal2-confirm:hover {
+      /* background-color: #4caf4f !important; */
+      background: linear-gradient(65deg, #4caf50 0%, #238825 40%, #176819 70%, #43c745 100%) !important;
+    }
+
+    .swal2-cancel:hover {
+      /* background-color: #4caf4f !important; */
+      background: linear-gradient(65deg, #e41818 0%, #a92121 40%, #7a1515 70%, #e43838 100%) !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .line {
+      position: relative;
+      width: 100%;
+      height: 3px;
+      background-color: rgb(134, 134, 134);
+      /* z-index: 1; */
+    }
+
+
+
+
+
+
+
+
+    /* ------------------------- FOR LIGHT THEME ---------------------- */
+
+    .checkbox {
+      opacity: 0;
+      position: absolute;
+    }
+
+    .label {
+      background-color: #111;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 26px;
+      width: 50px;
+      transform: scale(1.5);
+    }
+
+    .label .ball {
+      /* background-color: #073f7fc0; */
+      background: linear-gradient(120deg, #e0bd6d 30%, #073f7f 70%, #9eabb9 100%);
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: 22px;
+      width: 22px;
+      transform: translateX(0px);
+      transition: transform 0.2s linear;
+    }
+
+    .checkbox:checked+.label .ball {
+      transform: translateX(24px);
+    }
+
+
+    .fa-moon {
+      color: #e7d281;
+    }
+
+    .fa-sun {
+      color: #f39c12;
+    }
+
+
+    /* ------------------------- FOR LIGHT THEME END ---------------------- */
+
+
+    /* ------------------------- FOR DARK THEME --------------------------- */
+
+    .glass-overlay {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #7dade47d, #355b877d, rgba(255, 255, 255, 0.782), transparent),
+        url('MER\ LOGO\ UN-F.png');
+      background-size: 50% auto, cover;
+      /* Adjust the background size */
+      background-position: 0 0, center;
+      /* Position the gradient and image */
+      /* background: linear-gradient(120deg, #e0bd6d 30%, #073f7f 70%, #9eabb9 100%); */
+      /* animation: glassAnimation 1.2s ease-in-out; */
+      animation: glassAnimation 0.7s ease-in-out forwards;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.5;
+
+      overflow: hidden;
+    }
+
+
+    /* Effects for Light to dark mode */
+    @keyframes glassAnimation {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(100%);
+      }
+
+
+    }
+
+
+
+    /* Additional keyframes for reversing the animation */
+    @keyframes glassAnimationReverse {
+      from {
+        transform: translateX(100%);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+
+    }
+
+
+
+
+
+
+    :root {
+      --text-color-light: #073f7f;
+      /* Blue color for light mode */
+      --text-color-dark: #ffffff;
+      /* White color for dark mode */
+
+    }
+
+
+    body {
+      transition: background 0.9s linear, color 0.9s linear;
+      /* animation: gradientTransition 0.9s linear; */
+    }
+
+    body.dark {
+      background: #292C35;
+      color: var(--text-color-dark);
+    }
+
+    body.light {
+      background: #ffffff;
+      color: var(--text-color-light) !important;
+      transition: background 0.9s linear, color 0.9s linear;
+    }
+
+
+
+    /* Close button style in dark mode */
+    body.dark #mdl-xbtn {
+      color: #ffffff !important;
+    }
+
+
+
+    body.dark .modal-content {
+      background-color: #4d4d4d;
+      /* Gray background color for dark mode */
+      color: #ffffff;
+      /* White text color for dark mode */
+
+      transition: background-color 1.2s ease-in-out, color 1.2s ease-in-out;
+      /* Smooth transition on background and text color change */
+    }
+
+    /* Light mode transition on background and text color change */
+    body.light .modal-content {
+      background-color: #ffffff;
+      color: #000000;
+      transition: background-color 1.2s ease-in-out, color 1.2s ease-in-out;
+    }
+
+    body.dark h1,
+    body.dark h2,
+    body.dark h3,
+    body.dark h4,
+    body.dark h5,
+    body.drak h6,
+    body.dark p,
+    body.dark label,
+    body.dark .editP-txt,
+    body.dark .dropdown-toggle
+
+    /* body.dark input, */
+    /* body.dark select  */
+      {
+      color: #ffffff !important;
+    }
+
+
+
+
+
+
+    /* ------------------------ DATA TABLE IN DARK THEME --------------------- */
+
+    body.dark .panel .panel-body .table tbody tr td {
+      color: #ffffff;
+      background: linear-gradient(to right, #05274e, #1b4a79);
+      font-size: 14px;
+      padding: 10px 12px;
+      vertical-align: middle;
+      border-color: #045ec6;
+
+      transition: all 0.5 ease 0s;
+      overflow: hidden;
+      transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+    }
+
+
+    /* Add hover effect for table rows */
+    body.dark .panel .panel-body .table tbody tr:hover td {
+      background: linear-gradient(170deg, rgb(236, 232, 204), #20588f);
+      /* Change the gradient colors on hover */
+      color: #000000;
+
+      /* Change text color on hover */
+      transform: scale(1.0);
+      /* Add a subtle scale effect on hover */
+      overflow: auto;
+
+
+    }
+
+    body.dark .panel .panel-body .table tbody tr:nth-child(even) {
+      background-color: rgb(255, 255, 255);
+    }
+
+
+
+    body.dark .panel {
+      background: linear-gradient(to right, #78a3d4, #2c3e50);
+      padding: 0;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 15px rgba(192, 192, 192, 0.763), 0 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+
+
+    /* Customize the header background color */
+    body.dark
+
+    /* #blu-tbl  */
+    thead th {
+      background-color: #87bcf9;
+      color: rgb(0, 0, 0);
+      border: 1px solid #ffffff32;
+      transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+    }
+
+
+    /* Change the color of the "Entries" text */
+    body.dark .dataTables_length select {
+      color: rgb(255, 255, 255);
+      background-color: #94b4d9 !important;
+      border-color: #4d76a4;
+      transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+    }
+
+
+
+    /* Change the color of the active page button */
+    body.dark .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+      border-radius: 20px;
+      color: #020202 !important;
+      padding: 5px 13px;
+      transition: all 0.3s ease 0s;
+      background-color: #004cff !important;
+    }
+
+    /* Style for previous and next buttons */
+    body.dark .dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+    body.dark .dataTables_wrapper .dataTables_paginate .paginate_button,
+    body.dark .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+      background-color: #87bcf9 !important;
+      border: 1px solid #043d7b;
+      border-radius: 20px;
+      padding: 5px 13px;
+      color: #073f7f !important;
+      text-decoration: none;
+      margin-right: 5px;
+      transition: all 0.3s ease 0s;
+      margin: 5px;
+    }
+
+
+    /* Style for disabled previous and next buttons */
+    body.dark .dataTables_wrapper .dataTables_paginate .paginate_button.previous.disabled,
+    body.dark .dataTables_wrapper .dataTables_paginate .paginate_button.next.disabled {
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: rgba(255, 255, 255, 0.5) !important;
+      background-color: #5a9ce0;
+      /* cursor: not-allowed; */
+      transition: all 0.3s ease 0s;
+    }
+
+    /* Hover animation for enabled buttons */
+    body.dark .dataTables_wrapper .dataTables_paginate .paginate_button:not(.disabled):hover {
+      background-color: #5a9ce0;
+      border-color: #195697;
+      color: rgb(255, 255, 255) !important;
+      transition: all 0.3s ease 0s;
+    }
+
+    /* ------------------------- FOR DARK THEME END --------------------------- */
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <div class="container mt-5">
+    <div class="container vh-70 d-flex justify-content-center align-items-center">
+      <div class="one-quarter" id="switch">
+        <input type="checkbox" class="checkbox" id="chk" />
+        <label class="label" for="chk">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+
+          <div class="ball"></div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ------------------------------ EDIT PROFILE FORM ---------------------- -->
+
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row justify-content-end" id="admin-row">
+        <div class="image-container">
+          <img src="" alt="User" class="img-fluid" style="max-width: 50px; max-height: 50px;" id="anotherIcon">
+        </div>
+        <!--  Admin Dropdown  -->
+        <button type="button" id="admn-btn" class="btn dropdown-toggle text-right text-md-left" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Sec. Cruz
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Personal Information</a>
+          <a class="dropdown-item" href="#">Inbox</a>
+          <a class="dropdown-item" href="#">Settings</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">About</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="editP-txt">
+          Edit Profile
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content">
+    <div class="row">
+      <!-- --------------------- Choose profile form ------------------ -->
+
+      <div class="col-md-4 mb-3">
+        <div id="left-frm" class="card">
+          <div class="card-body">
+            <form>
+              <div class="text-center">
+                <img src="" alt="Profile Picture" class="img-fluid rounded-circle mb-3" id="profileImage">
+                <div class="custom-file">
+                  <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
+                  <label class="custom-file-label" for="imageInput">Upload new photo</label>
+                </div>
+                <div class="form-group mt-4">
+                  <div id="descript-txt" class="card">
+                    <div class="card-body">
+                      <p>Upload a new photo. Larger image will be resized automatically.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- --------------------- Choose profile form end ------------------ -->
+
+
+      <!-- --------------------- User Info form ------------------ -->
+
+      <div class="col-md-8">
+        <div id="usr-info" class="card">
+          <div class="card-body">
+            <form>
+
+              <!-- Header -->
+              <div class="form-row justify-content-center mb-4">
+                <div class="col-md-12">
+                  <h2 class="">User info</h2>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="fullname">Full Name</label>
+                  <input type="name" class="form-control" id="fullname" name="fullname">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" id="username" name="username">
+                </div>
+              </div>
+
+              <div class="form-row ">
+                <div class="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="confirmEmail">Confirm Email</label>
+                  <input type="email" class="form-control" id="confirmEmail" name="confirmEmail">
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+              <!-- <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                </div>
+              </div> -->
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="password">Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" name="password">
+                    <div class="input-group-append">
+
+                      <button class="btn btn-outline-secondary no-hover-bg" type="button"
+                        onclick="togglePasswordVisibility('password')"
+                        style="outline: none; box-shadow: none; border-color: transparent; background-color: none;">
+                        <!-- Show -->
+                        <lord-icon src="https://cdn.lordicon.com/ktpvefbv.json" trigger="click"
+                          colors="primary:#ffffff,secondary:#ffffff">
+                        </lord-icon>
+
+                      </button>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary no-hover-bg" type="button"
+                        onclick="togglePasswordVisibility('confirmPassword')"
+                        style="outline: none; box-shadow: none; border-color: transparent; background-color: none;">
+                        <lord-icon src="https://cdn.lordicon.com/ktpvefbv.json" trigger="click"
+                          colors="primary:#073f7f,secondary:#ffffff">
+                        </lord-icon>
+                        <!-- Show -->
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+              <!-- Footer -->
+              <div class="row mt-5">
+                <div class="col-md-12">
+                  <footer class="text-center">
+                  </footer>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="form-row justify-content-end mr-1 mt-4">
+          <button type="submit" id="updt-btn" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+      <!-- --------------------- User Info form ------------------ -->
+
+    </div>
+
+
+  </div>
+
+  <!-- ------------------------------ EDIT PROFILE FORM END ---------------------- -->
+
+
+
+
+
+
+  <div class="overlay"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+
+
+
+
+
+
+
+
+
+
+
+    <div class="brand row justify-content-center ml-0">
+      <!-- <h3>Brand Name</h3> -->
+      <img class="ml-4 mt-3" src="MER LOGO.png" alt="MER Suite logo" width="50" height="50">
+      <a id="MERsut-txt" class="animate-MER" href="#">MER Suite</a>
+      <!-- <div class="line mt-2"></div> -->
+    </div>
+    <div class="line mt-2"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li id="DB-btn">
+      <a class=" btn btn-block" href="#">
+        <i class="fa-sharp fa-light fa-chart-mixed"></i>
+        <div>Dashboard</div>
+      </a>
+    </li>
+
+
+    <!-- --------------------- ADMIN BACK UP ------------------->
+
+    <li id="Bcku-btn" class="dropdown">
+
+      <a href="#works" class="dropdown-toggle             btn btn-block          " data-toggle="dropdown">
+        <i class="fa-duotone fa-cloud-arrow-up"></i>
+        <!-- Back-Up -->
+
+        <div>Back-Up</div>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu animated fadeInLeft ml-4" role="menu">
+        <!-- <div class="dropdown-header">Dropdown heading</div> -->
+
+        <li>
+          <a href="#pictures">
+            <i class="fa-duotone fa-users-medical"></i>PIR
+          </a>
+        </li>
+
+        <li>
+          <a href="#videos">
+            <i class="fa-duotone fa-eye"></i>MER
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- --------------------- ADMIN BACK UP END ------------------->
+
+
+
+
+
+    <!-- --------------------- OPTO REPOSITORY ------------------->
+
+    <li id="Opto-Repo-btn" class="dropdown">
+
+      <a href="#works" class="dropdown-toggle btn btn-block" data-toggle="dropdown">
+        <i class="fa-light fa-table-tree" style="color: #ffffff;"></i>
+        <!-- Opto. Repository -->
+        <div>Opto. Repository</div>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu animated fadeInLeft ml-4" role="menu">
+        <!-- <div class="dropdown-header">Dropdown heading</div> -->
+
+        <li>
+          <a href="#pictures">
+            <i class="fa-duotone fa-users-medical"></i>PIR
+          </a>
+        </li>
+
+        <li>
+          <a href="#videos">
+            <i class="fa-duotone fa-eye"></i>MER
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- --------------------- OPTO REPOSITORY END ------------------->
+
+
+    <!-- --------------------- OPTO ARCHIVED ------------------->
+
+    <li id="Opto-Arcv-btn" class="dropdown">
+
+      <a href="#works" class="dropdown-toggle btn btn-block" data-toggle="dropdown">
+        <i class="fa-sharp fa-solid fa-file-zipper"></i>
+        <!-- Archived -->
+        <div>Archived</div>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu animated fadeInLeft ml-4" role="menu">
+        <!-- <div class="dropdown-header">Dropdown heading</div> -->
+
+        <li>
+          <a href="#pictures">
+            <i class="fa-duotone fa-users-medical"></i>PIR
+          </a>
+        </li>
+
+        <li>
+          <a href="#videos">
+            <i class="fa-duotone fa-eye"></i>MER
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- --------------------- OPTO ARCHIVED END ------------------->
+
+
+    <!-- --------------------- OPTO GENERATE RECORD ------------------->
+
+    <li id="Opto-GenR-btn" class="dropdown">
+
+      <a href="#works" class="dropdown-toggle text-center btn btn-block" data-toggle="dropdown">
+        <i class="fa-duotone fa-hospital-user "></i>
+        <!-- Generate <br> Record -->
+        <div> Generate <br> Record</div>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu animated fadeInLeft ml-4" role="menu">
+        <!-- <div class="dropdown-header">Dropdown heading</div> -->
+
+        <li>
+          <a href="#pictures">
+            <i class="fa-duotone fa-users-medical"></i>PIR
+          </a>
+        </li>
+
+        <li>
+          <a href="#videos">
+            <i class="fa-duotone fa-eye"></i>MER
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- --------------------- OPTO GENERATE RECORD END ------------------->
+
+
+
+    <!-- --------------------- SECRETARY REPOSITORY ------------------->
+
+    <li id="Sec-Repo-btn" class="dropdown">
+
+      <a href="#works" class="dropdown-toggle text-center btn btn-block" data-toggle="dropdown">
+        <i class="fa-duotone fa-user-group"></i>
+        <!-- Sec. Repository -->
+        <div>Sec. Repository</div>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu animated fadeInLeft ml-4" role="menu">
+        <!-- <div class="dropdown-header">Dropdown heading</div> -->
+
+        <li>
+          <a href="#pictures">
+            <i class="fa-duotone fa-users-medical"></i>PIR
+          </a>
+        </li>
+
+        <li>
+          <a href="#videos">
+            <i class="fa-duotone fa-eye"></i>MER
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- --------------------- SECRETARY REPOSITORY END ------------------->
+
+
+
+
+    <!-- --------------------- SECRETARY GENERATE RECORD ------------------->
+
+    <li id="Sec-GenR-btn" class="dropdown">
+
+      <a href="#works" class="dropdown-toggle text-center btn btn-block" data-toggle="dropdown">
+        <i class="fa-duotone fa-hospital-user "></i>
+        <!-- Generate <br> Record -->
+        <div>Generate <br> Record</div>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu animated fadeInLeft ml-4" role="menu">
+        <!-- <div class="dropdown-header">Dropdown heading</div> -->
+
+        <li>
+          <a href="#pictures">
+            <i class="fa-duotone fa-users-medical"></i>PIR
+          </a>
+        </li>
+
+        <li>
+          <a href="#videos">
+            <i class="fa-duotone fa-eye"></i>MER
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- --------------------- SECRETARY GENERATE RECORD END ------------------->
+
+
+
+
+
+    <!-- <li id="PIR-btn">
+      <a class=" btn btn-block" href="#">
+        <i class="fa-thin fa-sensor-cloud" style="color: #ffffff;"></i>
+        <div>PIR Repository</div>
+      </a>
+    </li>
+
+    <li id="MER-R-btn">
+      <a class=" btn btn-block" href="#">
+        <i class="fa-light fa-table-tree" style="color: #ffffff;"></i>
+        <div>MER Repository</div>
+      </a>
+    </li> -->
+
+
+
+
+
+
+    <!-- <li id="PIR-btn">
+      <a class=" btn btn-block" href="#">
+        <i class="fa-thin fa-sensor-cloud" style="color: #ffffff;"></i>
+        <div>PIR Repository</div>
+      </a>
+    </li>
+    <li id="MER-R-btn">
+      <a class=" btn btn-block" href="#">
+        <i class="fa-light fa-table-tree" style="color: #ffffff;"></i>
+        <div>MER Repository</div>
+      </a>
+    </li> -->
+
+
+
+
+    <!-- <li id="usersm-btn">
+          <a class="nav-link btn btn-block" href="#">
+              <i class="fa-duotone fa-users-medical" style="--fa-primary-color: #06c7e0; --fa-secondary-color: #fafafa; --fa-secondary-opacity: 01.4;"></i>
+              <div>Users Management</div>
+          </a>
+         </li> -->
+    <li id="App-Re-btn">
+      <a class=" btn btn-block" href="#">
+        <i class="fa-duotone fa-clipboard-list-check" style="--fa-secondary-color: #e8e8e8;"></i>
+        <div>Approval Request</div>
+      </a>
+    </li>
+    <li id="Sett-btn">
+      <a class=" btn btn-block" href="#">
+        <i class="fa-duotone fa-gear"></i>
+        <div>Settings</div>
+      </a>
+    </li>
+    <li id="Sgn-Out-btn">
+      <a class=" btn btn-block" href="#">
+        <!-- <i class="fa-duotone fa-chevrons-left" style="--fa-primary-color: #b9a7a7; --fa-primary-opacity: 0.5; --fa-secondary-color: #c5b4b4; --fa-secondary-opacity: 01;"></i> -->
+        <i id="signout-i" class="fa-regular fa-arrow-right-from-bracket fa-rotate-180" style="color: #e6e6e6;"></i>
+        <div>Sign Out</div>
+      </a>
+    </li>
+
+  </div>
+
+  <!-- Toggle Button -->
+  <div class="toggle-btn" onclick="toggleSidebar()">
+    <span class="fas fa-bars fa-2x"></span>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-5 col-md-9">
+        <div class="panel">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col col-sm-3 col-xs-12">
+                <h4 class="title">Data <span>List</span></h4>
+              </div>
+              <div class="col-sm-9 col-xs-12 text-right">
+                <div class="btn_group">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <button class="btn btn-default" title="Reload"><i class="fa fa-sync-alt"></i></button>
+                  <button class="btn btn-default" title="Pdf"><i class="fa fa-file-pdf"></i></button>
+                  <button class="btn btn-default" title="Excel"><i class="fas fa-file-excel"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body table-responsive">
+            <table id="blu-tbl" class="table" style="width:100%">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Full Name</th>
+                  <th>Age</th>
+                  <th>Job Title</th>
+                  <th>City</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>5</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+
+
+
+                <tr>
+                  <td>5</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+
+
+                <tr>
+                  <td>5</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>5</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+
+
+                <tr>
+                  <td>7</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+
+
+                <tr>
+                  <td>11</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>Jollibee Emcee Donalds</td>
+                  <td>31</td>
+                  <td>iOS Developer</td>
+                  <td>sasageyo</td>
+                  <td>
+                    <ul class="action-list">
+                      <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                      <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                    </ul>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container row justify-content-center">
+    <div class="color-picker">
+
+      <label for="backgroundColor">Choose Background Color:</label>
+
+      <input type="color" id="backgroundColor" value="#ffffff">
+
+      <button class="btn btn-primary" onclick="confirmColor()">Confirm</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Content Area -->
+
+  <div id="" class="content">
+    <h1>Main Content</h1>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-offset-5 col">
+          <div class="panel">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col col-sm-3 col-xs-12">
+                  <h4 class="title">Data <span>List</span></h4>
+                </div>
+
+              </div>
+            </div>
+            <div class="panel-body table-responsive">
+              <table id="blu-tbl" class="table" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>Job Title</th>
+                    <th>City</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>5</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+
+
+
+                  <tr>
+                    <td>5</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+
+
+                  <tr>
+                    <td>5</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <td>5</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+
+
+                  <tr>
+                    <td>7</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+
+
+                  <tr>
+                    <td>11</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>Jollibee Emcee Donalds</td>
+                    <td>31</td>
+                    <td>iOS Developer</td>
+                    <td>sasageyo</td>
+                    <td>
+                      <ul class="action-list">
+                        <li><a href="#" data-tip="edit"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="#" data-tip="delete"><i class="fa fa-trash"></i></a></li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <!-- 
+
+  <div class="table-responsive">
+    <table id="example" class="display nowrap" style="width:100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Age</th>
+          <th>Start date</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tiger Nixon</td>
+          <td>System Architect</td>
+          <td>Edinburgh</td>
+          <td>61</td>
+          <td>2011/04/25</td>
+          <td>$320,800</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ---------------------------- MODAL BUTTON ADD USER ICON ------------------------- -->
+
+  <div class="content">
+
+    <!-- Button trigger modal -->
+    <button id="modal-btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+      style="border: none; border-radius: 60px; padding: 10px 13px; background-color: #073f7f;">
+      <!-- MODAL BUTTON ADD USER ICON -->
+      <i class="fa-solid fa-user-plus fa-beat-fade"></i>
+
+    </button>
+
+    <!-- ---------------------------- MODAL BUTTON ADD USER ICON ------------------------- -->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- </div> -->
+
+
+      <div class="modal-dialog">
+
+
+        <div class="modal-content">
+
+          <!-- <img src="slide5.jpg" alt="" class="modal-image"> -->
+
+          <div class="">
+            <!-- <h4>MER Suite</h4> -->
+            <div class="card-image">
+              <!-- <img src="modal-pic.jpg" alt="" class="modal-image "> -->
+              <span>MER Suite</span>
+              <!-- <div class="image-overlay"></div> -->
+            </div>
+            <div class="image-overlay"></div>
+          </div>
+
+          <div class="modal-header">
+
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+
+            <!-- <img src="slide5.jpg" alt="" class="modal-image"> -->
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="wrapper">
+    <div class="box">
+      <p>Conic gradient</p>
+    </div>
+
+    <div class="box">
+      <p>Radial gradient</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- DataTables JavaScript -->
+
+
+
+  <!-- 
+  <script type="text/javascript" charset="utf8"
+    src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> 
+
+  <script src="https://cdn.datatables.net/responsive/2.2.10/js/dataTables.responsive.min.js"></script>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+ -->
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.10/js/dataTables.responsive.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+  <!-- ----------------- SEEKING PASSWORD ANIMATED ICON ------------- -->
+  <script src="https://cdn.lordicon.com/lordicon-1.3.0.js"></script>
+
+
+  <!-- Include SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+
+
+
+
+
+  <script>
+
+    // $(document).ready(function () {
+    //   $('#example').DataTable({
+    //     responsive: true
+    //   });
+    // });
+
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+      document.querySelector('.content').classList.toggle('shift');
+    }
+
+
+
+    // --------------------------- OVERLAY --------------------------------
+    $(document).ready(function () {
+      var trigger = $('.toggle-btn'),
+        overlay = $('.overlay'),
+        actionbtns = $('.action-list'),
+        uncovered = false;
+
+      trigger.click(function () {
+        overlayout();
+      });
+
+      function overlayout() {
+        const actionbtnsArray = Array.from(actionbtns); // Convert the NodeList to an array
+
+        if (uncovered == true) {
+          overlay.hide();
+          uncovered = false;
+
+          // Enable all action buttons
+          actionbtnsArray.forEach(function (btn) {
+            btn.disabled = false;
+          });
+        } else {
+          overlay.show();
+          uncovered = true;
+
+          // Disable all action buttons
+          actionbtnsArray.forEach(function (btn) {
+            btn.disabled = true;
+          });
+
+          // Set a higher z-index for the overlay
+          // overlay.css('z-index', '2');
+        }
+      }
+
+      $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+      });
+    });
+
+
+
+
+
+
+
+
+
+
+    // ---------------------- Customization for Datatables ----------------------------
+
+    $(document).ready(function () {
+      $('#blu-tbl').DataTable({
+        "language": {
+          "search": "_INPUT_", // Customize the search input field
+          "searchPlaceholder": "Search...",
+        },
+        "order": [], // Disable initial sorting
+      });
+    });
+
+
+
+
+
+
+
+
+
+
+    // $(document).ready(function () {
+    //   $('#blu-tbl').DataTable({
+    //     "pagingType": "full_numbers", // Customize pagination style
+    //     "language": {
+    //       "search": "_INPUT_", // Customize the search input field
+    //       "searchPlaceholder": "Search...",
+    //     },
+    //     "order": [], // Disable initial sorting
+    //     "dom": '<"panel-footer"<"row"<"col col-sm-6 col-xs-6"l><"col-sm-6 col-xs-6"f>>r>t<"panel-footer"<"row"<"col col-sm-6 col-xs-6"i><"col-sm-6 col-xs-6"p>>>',
+    //   });
+    // });
+
+
+
+
+    function handleImageUpload(event) {
+      const profileImage = document.getElementById('profileImage');
+      const profileImageLabel = document.getElementById('profileImageLabel');
+      const userIcon = document.getElementById('user-icon'); // Get the icon element
+      const selectedImage = event.target.files[0];
+      const imageURL = URL.createObjectURL(selectedImage);
+
+      localStorage.setItem('uploadedPhoto', imageURL);
+
+      profileImage.src = imageURL;
+      anotherIcon.src = imageURL;
+
+      // Hide the "Choose Profile Picture" label
+      profileImageLabel.style.visibility = 'hidden';
+
+      // Change the user icon to another Font Awesome icon when an image is uploaded
+      userIcon.classList.remove('fa-circle-user'); // Remove the old class
+      userIcon.classList.add('fa-user-check'); // Add the new class
+    }
+
+    window.onload = function () {
+      const uploadedPhoto = localStorage.getItem('uploadedPhoto');
+      const profileImage = document.getElementById('profileImage');
+      const anotherIcon = document.getElementById('anotherIcon');
+      const userIcon = document.getElementById('user-icon'); // Get the icon element
+
+      if (uploadedPhoto) {
+        profileImage.src = uploadedPhoto;
+        anotherIcon.src = uploadedPhoto;
+
+        // Change the user icon to another Font Awesome icon if an image is already uploaded
+        userIcon.classList.remove('fa-circle-user');
+        userIcon.classList.add('fa-user-check');
+      } else {
+        profileImage.src = 'path/to/default-user-icon.jpg';
+        anotherIcon.src = 'path/to/default-user-icon.jpg';
+      }
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+    // --------------- Function to toggle password visibility ----------------- //
+    function togglePasswordVisibility(inputId) {
+      var passwordInput = document.getElementById(inputId);
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+
+
+
+
+
+
+
+    function confirmColor() {
+      const colorPicker = document.getElementById('backgroundColor');
+      const selectedColor = colorPicker.value;
+
+      Swal.fire({
+        title: 'Are you sure?',
+        // text: `Do you want to change the background color to ${selectedColor}?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, change it!',
+
+        customClass: {
+          popup: 'custom-popup-class', // Add a custom class to the popup/dialog
+
+          title: 'custom-title-class', // Add a custom class to the title
+          content: 'custom-content-class', // Add a custom class to the content/text
+
+          icon: 'custom-icon-class', // Add a custom class to the icon
+
+          form: 'custom-form-class', // Add a custom class to the form
+          resultPopup: 'custom-result-popup-class', // Add a custom class to the result message box
+        },
+
+
+      }).then((result) => {
+        if (result.isConfirmed) {
+          changeBackgroundColor(selectedColor);
+
+          // // Add custom class to the result message box before closing
+          // const resultPopup = Swal.getPopup();
+          // resultPopup.classList.add('custom-result-popup-class');
+          Swal.fire(
+            'Changed!',
+            'Background color has been updated.',
+            'success'
+
+          );
+
+          // Add custom class to the result message box immediately after showing it
+          const resultPopup = Swal.getPopup();
+          resultPopup.classList.add('custom-result-popup-class');
+
+        }
+      });
+
+
+
+    }
+
+
+
+    // TOGGLE DIFFERENTS COLOR SELECTION //
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // -------------------------- DARK AND LIGHT THEME ------------------------- //
+
+    const chk = document.getElementById('chk');
+
+    // Function to create and append overlay with glass effect
+    const createGlassOverlay = (animationName) => {
+      // Create overlay element
+      const overlay = document.createElement('div');
+      overlay.classList.add('glass-overlay');
+      overlay.style.animationName = animationName;
+
+      // Append overlay to the body
+      document.body.appendChild(overlay);
+
+      // Remove overlay after animation duration (1.2s in this example)
+      setTimeout(() => {
+        overlay.remove();
+      }, 1200);
+    };
+
+    // Add an event listener to the checkbox for the 'change' event
+    chk.addEventListener('change', () => {
+      // Toggle the 'dark' class on the body element
+      document.body.classList.toggle('dark');
+
+      // Toggle the 'light' class on the body element based on the absence of 'dark' class
+      document.body.classList.toggle('light', !document.body.classList.contains('dark'));
+
+      // Choose the appropriate animation based on the current mode
+      const animationName = document.body.classList.contains('dark') ? 'glassAnimation' : 'glassAnimationReverse';
+
+      // Call the function to create and append the glass overlay with the chosen animation
+      createGlassOverlay(animationName);
+    });
+
+    // SOCIAL PANEL JS
+    const floating_btn = document.querySelector('.floating-btn');
+    const close_btn = document.querySelector('.close-btn');
+    const social_panel_container = document.querySelector('.social-panel-container');
+
+    floating_btn.addEventListener('click', () => {
+      social_panel_container.classList.toggle('visible');
+    });
+
+    // Add an event listener to 'close-btn' for the 'click' event
+    close_btn.addEventListener('click', () => {
+      // Remove the 'visible' class from 'social_panel_container'
+      social_panel_container.classList.remove('visible');
+    });
+
+    // -------------------------- DARK AND LIGHT THEME END ------------------------- //
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
